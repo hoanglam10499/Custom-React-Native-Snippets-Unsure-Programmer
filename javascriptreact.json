@@ -1,11 +1,6 @@
 {
-    /*
-	// Place your snippets for JavaScript React here. Each snippet is defined under a snippet name and has a prefix, body and 
-	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
-    // same ids are connected.
-    
-*/ "React Native Component": {
+    /*H.Lam snippets*/
+    "React Native Component": {
         "prefix": "imrnc",
         "body": [
             "import React, { Component } from \"react\";",
@@ -93,36 +88,105 @@
         "description": "javscript map method"
     },
     "React Native Dimensions": {
-		"prefix": "rndime",
-		"body": [
-			"const {width,height} = Dimensions.get('window')"
-		],
-		"description": "Dimensions RN"
-	},
-	"React Native Component Only":{
-		"prefix":"rncomp",
-		"body":[
-			"\nclass ${1:componentName} extends Component{",
-				"\trender(){",
-				"\t\treturn (",
-				"\t\t\t<View style={{flex:1,alignItems:'center',justifyContent:'center'}}>",
-				"\t\t\t\t<Text>${1:componentName}</Text>",
-				"\t\t\t</View>",
-				"\t\t);",
-				"\t}",
-				"}"
-		],
-		"description":"New React Native Component"
+        "prefix": "rndime",
+        "body": [
+            "const {width,height} = Dimensions.get('window')"
+        ],
+        "description": "Dimensions RN"
     },
-    "React Native Functional Component Only":{
-		"prefix":"rnfcomp",
-		"body":[
-			"\nconst ${1:componentName} = (props) => (",
-			"\t<View style={{flex:1,alignItems:'center',justifyContent:'center'}}>",
-			"\t\t<Text>${1:componentName}</Text>",
-			"\t</View>",
-			")"
-		],
-		"description":"New React Native Component"
-	}
+    "React Native Component Only": {
+        "prefix": "rncomp",
+        "body": [
+            "\nclass ${1:componentName} extends Component{",
+            "\trender(){",
+            "\t\treturn (",
+            "\t\t\t<View style={{flex:1,alignItems:'center',justifyContent:'center'}}>",
+            "\t\t\t\t<Text>${1:componentName}</Text>",
+            "\t\t\t</View>",
+            "\t\t);",
+            "\t}",
+            "}"
+        ],
+        "description": "New React Native Component"
+    },
+    "React Native Functional Component Only": {
+        "prefix": "rnfcomp",
+        "body": [
+            "\nconst ${1:componentName} = (props) => (",
+            "\t<View style={{flex:1,alignItems:'center',justifyContent:'center'}}>",
+            "\t\t<Text>${1:componentName}</Text>",
+            "\t</View>",
+            ")"
+        ],
+        "description": "New React Native Component"
+    },
+    "Button": {
+        "prefix": "<but",
+        "body": [
+            "<Button title='${1:title}' onPress={()=>${2:alert('button pressed')}}/>"
+        ]
+    },
+    "TextInput": {
+        "prefix": "<tex",
+        "body": [
+            "<TextInput ",
+            "\tplaceholder='${1:title}' ",
+            "\tonChangeText={()=>{ ",
+            "\t\tthis.setState({ ${2:password}: ${3:password} })",
+            "\t}}",
+            "\tvalue={this.state.${4:password}}",
+            "></TextInput>"
+        ]
+    },
+    "Image URI": {
+        "prefix": "<imgu",
+        "body": [
+            "<Image",
+            "\tstyle={{width: 50, height: 50}}",
+            "\tsource={{uri: '${1:link}'}}",
+            "></Image>"
+        ]
+    },
+    "Image require": {
+        "prefix": "<imgr",
+        "body": [
+            "<Image",
+            "\tstyle={{width: 50, height: 50}}",
+            "\tsource={require('${1:link}')",
+            "></Image>"
+        ]
+    },
+    "Block Back Button": {
+        "prefix": "<khoanutback",
+        "body": [
+            "componentDidMount() {",
+            "    BackHandler.addEventListener('hardwareBackPress', this.handleBackPress);",
+            "}",
+            "componentWillUnmount() {",
+            "    BackHandler.removeEventListener('hardwareBackPress', this.handleBackPress);",
+            "}",
+            "handleBackPress = () => {",
+            "   ${1:Actions.Login();}",
+            "    return true;",
+            "}"
+        ]
+    },
+    "Navigation Options": {
+        "prefix": "<navo",
+        "body": [
+            "static navigationOptions = {",
+            "    headerLeft: null,",
+            "}"
+        ]
+    },
+    "Contructor": {
+        "prefix": "<cons",
+        "body": [
+            "constructor(props) {",
+            "    super(props);",
+            "    this.state = {",
+            "    }",
+            "}"
+        ]
+    },
 }

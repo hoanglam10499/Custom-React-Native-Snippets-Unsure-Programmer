@@ -1,8 +1,0 @@
-{
-  "Button": {
-    "prefix": "<but",
-    "body": [
-      "<Button title='${1:title}' onPress={()=>${2:alert('button pressed')}}/>"
-    ]
-  }
-}

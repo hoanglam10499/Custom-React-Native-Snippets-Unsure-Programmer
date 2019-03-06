@@ -133,7 +133,7 @@
             "\tplaceholder='${1:title}' ",
             "\tonChangeText={()=>{ ",
             "\t\tthis.setState({ ${2:password}: ${3:this.state.password} })",
-            "\t\secureTextEntry,
+            "\tsecureTextEntry",
             "\t}}",
             "></TextInput>"
         ]

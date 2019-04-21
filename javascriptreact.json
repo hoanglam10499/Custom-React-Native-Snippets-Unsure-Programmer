@@ -127,14 +127,14 @@
         ]
     },
     "TextInput": {
-        "prefix": "<tex",
+        "prefix": "<texInput",
         "body": [
             "<TextInput ",
             "\tplaceholder='${1:title}' ",
-            "\tonChangeText={()=>{ ",
-            "\t\tthis.setState({ ${2:password}: ${3:this.state.password} })",
-            "\tsecureTextEntry",
+            "\tonChangeText={(${2:password})=>{ ",
+            "\t\tthis.setState({ ${3:password} })",
             "\t}}",
+            "\tsecureTextEntry",
             "></TextInput>"
         ]
     },
@@ -166,7 +166,6 @@
             "    BackHandler.removeEventListener('hardwareBackPress', this.handleBackPress);",
             "}",
             "handleBackPress = () => {",
-            "   ${1:Actions.Login();}",
             "    return true;",
             "}"
         ]
@@ -187,6 +186,69 @@
             "    this.state = {",
             "    }",
             "}"
+        ]
+    },
+
+    "Style": {
+        "prefix": "<style",
+        "body": [
+            "import { StyleSheet } from \"react-native\";",
+            "export default (styles = StyleSheet.create({",
+            "container: {",
+            "flex: 1",
+            "}"
+        ]
+    },
+
+    "Stack Top": {
+        "prefix": "<stackTop",
+        "body": [
+            "<Stack",
+                "tabBarStyle={{ marginTop: StatusBar.currentHeight, height: 1 }}",
+                "key=\"main\"",
+                "tabs",
+                "showLabel={false}",
+                "tabBarPosition=\"top\"",
+                "hideNavBar",
+            "></Stack>"
+        ]
+    },
+
+    "Stack Bot": {
+        "prefix": "<stackBot",
+        "body": [
+            "<Stack",
+                "key=\"main\"",
+                "tabs",
+                "tabBarPosition=\"bottom\"",
+                "hideNavBar",
+            "></Stack>"
+        ]
+    },
+
+    "Router": {
+        "prefix": "<rout",
+        "body": [
+            "<Router>",
+                "<Stack key=\"root\" hideNavBar>",
+                    "<Scene key=\"zero\" component={h0}  />",
+                    "<Scene key=\"zero\" component={h0}  />",
+                    "<Scene key=\"zero\" component={h0}  />",
+                "</Stack>",
+            "</Router>"
+        ]
+    },
+
+    "Express Nodejs": {
+        "prefix": "<expNodejs",
+        "body": [
+            "const express = require('express')",
+            "const app = express()",
+            "const port = 80",
+            "",
+            "app.get('/', (req, res) => res.send('Hello World!'))",
+            "",
+            "app.listen(port, () => console.log(`Example app listening on port ${port}!`))"
         ]
     },
 }
